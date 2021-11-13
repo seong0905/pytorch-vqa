@@ -41,7 +41,7 @@ def run(net, loader, optimizer, tracker, train=False, prefix='', epoch=0):
     loss_tracker = tracker.track('{}_loss'.format(prefix), tracker_class(**tracker_params))
     acc_tracker = tracker.track('{}_acc'.format(prefix), tracker_class(**tracker_params))
 
-    log_softmax = nn.LogSoftmax().cuda()
+    log_softmax = nn.LogSoftmax(dim=1).cuda()
     for v, q, a, idx, q_len in tq:
         var_params = {
             'volatile': not train,
