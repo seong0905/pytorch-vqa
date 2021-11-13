@@ -7,6 +7,8 @@ import torchvision.transforms as transforms
 
 import config
 
+import numpy as np
+import random
 
 def batch_accuracy(predicted, true):
     """ Compute the accuracies for a batch of predictions and answers """
@@ -134,3 +136,10 @@ def get_transform(target_size, central_fraction=1.0):
         transforms.Normalize(mean=[0.485, 0.456, 0.406],
                              std=[0.229, 0.224, 0.225]),
     ])
+
+def seed_everything(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
