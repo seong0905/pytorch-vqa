@@ -88,6 +88,8 @@ def run(net, loader, optimizer, tracker, train=False, prefix='', epoch=0):
 
 
 def main():
+    seed_everything(config.seed)
+    
     if len(sys.argv) > 1:
         name = ' '.join(sys.argv[1:])
     else:
