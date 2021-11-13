@@ -1,5 +1,5 @@
 # paths
-qa_path = 'vqa'  # directory containing the question and annotation jsons
+qa_path = '/content/drive/MyDrive/VQA/qa'  # directory containing the question and annotation jsons
 train_path = '/content/drive/MyDrive/VQA/train2014'  # directory of training images
 val_path = '/content/drive/MyDrive/VQA/val2014'  # directory of validation images
 test_path = '/content/drive/MyDrive/VQA/test2015'  # directory of test images
