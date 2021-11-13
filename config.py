@@ -23,3 +23,4 @@ initial_lr = 1e-3  # default Adam lr
 lr_halflife = 50000  # in iterations
 data_workers = 2
 max_answers = 3000
+seed = 42
